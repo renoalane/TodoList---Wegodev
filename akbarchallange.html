@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <table>
+          <form id="form-input" action=""></form>
+          <tr>
+            <td><label for="nama">Nama</label></td>
+            <td><input type="text" id="nama"/></td>
+          </tr>
+          <tr>
+            <td><label for="kelas">Kelas</label></td>
+            <td><input type="text" id="kelas"/></td>
+          </tr>
+          <tr>
+            <td><label for="absen">No Absen</label></td>
+            <td><input type="text" id="absen"/></td>
+          </tr>
+          <tr>
+            <td><button type="submit" id="sbmt">submit</button></td>
+          </tr>
+          </form>
+        <tr class="row">
+        </tr>
+        </table>
+
+      </fieldset>
+    </div>
+  </body>
+  <script>
+    const formInput = document.querySelector("#form-input");
+    const btn = document.querySelector('#sbmt')
+    const nama = document.querySelector("#nama");
+    const kelas =document.querySelector("#kelas");
+    const absen = document.querySelector("#absen");
+    const row = document.querySelector(".row");
+
+    const user = {
+      nama : "",
+      kelas: "",
+      absen: "",
+    };
+
+    nama.addEventListener("change", function(){
+      user.nama = nama.value;
+    })
+
+    kelas.addEventListener("change", function(){
+      user.kelas = kelas.value;
+      
+    })
+
+    absen.addEventListener("change", function(){
+      user.absen = absen.value;
+      
+         console.log(user);
+    })
+
+    let td = document.createElement("td");
+
+    sbmt.addEventListener("click", function(){
+      td.innerHTML = document.createTextNode(user);
+      console.log(td);
+      row.appendChild(td);
+    })
+
+
+
+
+    
+
+    // formInput.addEventListener("submit", tambah());
+
+    // function tambah(){
+      
+    // }
+
+
+
+
+  </script>
+</html>
