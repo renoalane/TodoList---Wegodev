@@ -11,3 +11,6 @@ const changeProjectHeadingTitle = (title) => {
 
 changeProjectHeadingTitle("Javascript is Cool")
 
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+});
